@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+/*=========================================================================================================*/
+/* parties.jsp */
+
+.parties-heading{
+	font-family: 'Single Day';
+    font-size: 120px;
+    margin: 0 0 40px;
+    font-weight: 1000;
+    text-align: center;
+    color: rgb(242, 106, 206);
+}
+
+.party-services {
+        background-color: rgb(250, 235, 248);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+
+    /* Style for the heading */
+    .party-services h2 {
+        font-size: 80px;
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
+        font-family: 'Single Day';
+    }
+
+    /* Style for the list items */
+    .party-services ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .party-services li {
+        margin-bottom: 10px;
+    }
+
+    /* Style for the span within list items 
+    .party-services li span {
+        font-weight: bold;
+        color: #007bff; 
+    }*/

@@ -1,0 +1,275 @@
+@charset "ISO-8859-1";
+/*
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+ */
+ /* Using Google Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Your+Chosen+Font');
+ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(../assets/bg2.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f77ee9;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.navbar ul li :hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px; 
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #f529ae;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #f529ae;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+.types-row{
+	width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+
+
+.types-col{
+	
+    padding: 10% 15%;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    border: 3px solid #f7d7f3;
+}
+
+.types-col:hover{
+	background: #f8def3;
+	cursor: pointer;
+}
+
+.types-col a{
+	font-family: 'Single Day';
+    font-size: 55px;
+    margin: 0 0 40px;
+    font-weight: 500;
+}
+
+.types-col button{
+    width: 100%;
+    padding: 14px 0;
+    background: transparent;
+    color: black;
+    font-size: 15px;
+    border: 1px solid #e33058;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.types-col button:hover{
+    background: #e33058;
+}
+
+
+
+
+
+
+
+/* Styles for the gallery container */
+div.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+}
+
+/* Styles for the unordered list inside the gallery */
+ul.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Items wrap to the next line */
+  justify-content: center;
+}
+
+/* Styles for the list items (images with text) */
+li.gallery {
+  flex: 0 0 calc(50% - 20px); /* Adjust the width of each item */
+  max-width: 350px; /* Limit the maximum width of each item */
+  margin: 10px; /* Adjust the margin between items */
+}
+
+/* Additional styles for the images within list items */
+img.gallery {
+  width: 100%;
+  height: 230px; /* Maintain aspect ratio */
+}
+
+
+/* Zoom In #1 */
+
+/* Initially, set the scale of the element with the 'gallery' class to normal size */
+.gallery {
+    -webkit-transform: scale(1); /* Set initial scale for WebKit browsers */
+    transform: scale(1); /* Set initial scale for modern browsers */
+    -webkit-transition: .3s ease-in-out; /* Apply a smooth transition effect */
+    transition: .3s ease-in-out; /* Apply a smooth transition effect */
+}
+
+/* When an image inside an element with the 'gallery' class is hovered over */
+.gallery img:hover {
+    /* Scale the image to 1.1 times its original size */
+    -webkit-transform: scale(1.1); /* Scale on hover for WebKit browsers */
+    transform: scale(1.1); /* Scale on hover for modern browsers */
+}
+
+
+
+
+
+/* Center the content horizontally and vertically */
+/*
+.directorDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for the heading */
+/*
+.directorDetails h1 {
+    font-family: 'Single Day', sans-serif;
+    font-size: 65px;
+    color: #ff70e2;
+}
+
+/* Adjustments for the image */
+/*
+.directorDetails img {
+    max-width: 200px; /* Ensure the image doesn't exceed its container */
+   /* height: auto; /* Maintain the aspect ratio */
+/*}
+
+
+.directorDetails{
+	display: flex;
+}
+
+.directors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+/*}
+
+.directorDetails {
+    width: 48%; /* Adjust width to fit two elements per row with margins */
+   /* margin-bottom: 20px; /* Add space between rows */
+    /* Other styling as needed */
+
+
+
+
+
+
+

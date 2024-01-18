@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<query id="create_messages_table">
+		<![CDATA[
+			CREATE TABLE messages(
+				messageId varchar(10) not null PRIMARY KEY,
+				cusName varchar(60) not null,
+				cusEmail varchar(50) not null,
+				subject varchar(100) not null,
+				message varchar(450) not null	
+			)
+		]]>
+	</query>
+	
+	<!-- Insert message into the table  -->
+	<query id="insert_message">
+		<![CDATA[
+			insert into messages (messageId,cusName,cusEmail,subject,message)
+			values (?,?,?,?,?)
+		]]>
+	</query>
+	
+	<query id="message_ids">
+         <![CDATA[        
+            select m.messageId from messages as m
+        ]]>
+	</query>
+	
+	
+	
+	
+	
+	
+	<!-- Customer Related Queries  -->
+	
+	<query id="create_customers_table">
+		<![CDATA[
+			CREATE TABLE customers(
+				cusId varchar(10) not null PRIMARY KEY,
+				firstName varchar(60) not null,
+				lastName varchar(60) not null,
+				email varchar(60) not null,
+				phoneNumber int(10) not null,
+				password varchar(60) not null	
+			)
+		]]>
+	</query>
+	
+	<!-- Insert customer into the table  -->
+	<query id="insert_customer">
+		<![CDATA[
+			insert into customers (cusId,firstName,lastName,email,phoneNumber,password)
+			values (?,?,?,?,?,?)
+		]]>
+	</query>
+	
+	<query id="customer_ids">
+         <![CDATA[        
+            select c.cusId from customers as c
+        ]]>
+	</query>
+
+</Querys>
